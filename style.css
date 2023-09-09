@@ -10,7 +10,6 @@ main {
 
 .img__container {
     max-height: 400px;
-    background-color: red;
 }
 
 .img__container img {
@@ -47,6 +46,7 @@ main {
     color: var(--clr-white);
     border: 1px solid transparent;
     border-radius: 6px;
+    cursor: pointer;
 }
 
 .results {

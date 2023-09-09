@@ -32,6 +32,7 @@ getMealBtn.addEventListener("click", async (e) => {
   e.preventDefault();
   const meal = await generateMeal();
   const ingredients = await getIngredients(meal);
+  console.log(meal);
   const resultsSectionInnerHtml = `
   <div class="left">
   <div class="img__container">
@@ -54,6 +55,21 @@ ${ingredients.map((ingredient) => `<li>${ingredient}</li>`).join("")}
   <p>
 ${meal?.strInstructions}
   </p>
+</div>
+<div>
+${
+  meal.strYoutube !== ""
+    ? ` <iframe
+      width="100%"
+      height="100%"
+      src="https://www.youtube.com/embed/${meal.strYoutube.slice(-11)}"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>`
+    : ""
+}
 </div>
   `;
   resultsSecion.innerHTML = resultsSectionInnerHtml;
