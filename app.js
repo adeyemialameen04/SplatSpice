@@ -10,7 +10,6 @@ const getIngredients = (meal) => {
         `${meal[`strIngredient${i}`]} - ${meal[`strMeasure${i}`]}`
       );
     } else {
-      // Stop if no more ingredients
       break;
     }
   }
@@ -42,8 +41,8 @@ getMealBtn.addEventListener("click", async (e) => {
     />
   </div>
   <div class="small-details">
-    <h5>Category: <span>${meal?.strCategory}</span></h3>
-    <h5>Area: <span>${meal?.strArea}</span></h3>
+    <h5>Category: <span>${meal?.strCategory}</span></h5>
+    <h5>Area: <span>${meal?.strArea}</span></h5>
   </div>
   <h3>Ingredients</h3>
   <ul>
