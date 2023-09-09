@@ -1,0 +1,39 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+main {
+    margin-top: 6rem;
+}
+
+.main__container {}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: .7rem;
+}
+
+.intro h1 {
+    color: var(--clr-dark-brown);
+    font-size: 1.8rem;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.intro button {
+    align-self: center;
+    background-color: var(--clr-blue);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding-block: .3rem;
+    padding-inline: .8rem;
+    color: var(--clr-white);
+    border: 1px solid transparent;
+    border-radius: 6px;
+}
